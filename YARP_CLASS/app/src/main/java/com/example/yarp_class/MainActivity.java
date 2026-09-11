@@ -46,12 +46,13 @@ private Button b4;
     @Override
     public void onClick(View v){
 
-        Toast.makeText(this, "Alerta", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Alerta, boton precionado", Toast.LENGTH_SHORT).show();
 
         int botoncito = v.getId();
 
-        String nombre = t.getText().toString();
-        t.setText("Hola " + nombre);
+        if(botoncito== R.id.button7){
+            String nombre = t.getText().toString();
+            t.setText("Hola " + nombre);}
 
         if(botoncito == R.id.button){
         Intent intent = new Intent(MainActivity.this,ventana1.class);
@@ -65,6 +66,7 @@ private Button b4;
             Intent intent = new Intent(MainActivity.this,ventana3.class);
             startActivity(intent);
         }
+
     }
 
     @Override
