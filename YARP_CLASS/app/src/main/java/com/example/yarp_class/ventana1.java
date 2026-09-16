@@ -121,7 +121,7 @@ public class ventana1 extends AppCompatActivity implements View.OnClickListener 
         } catch (NumberFormatException error) {
             Toast.makeText(this, "Escribe solo numeros", Toast.LENGTH_SHORT).show();
         } catch (ArithmeticException error2) {
-            Toast.makeText(this, "No se puede divir entre 0", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No se puede dividir entre 0", Toast.LENGTH_SHORT).show();
         }
     }
 }
