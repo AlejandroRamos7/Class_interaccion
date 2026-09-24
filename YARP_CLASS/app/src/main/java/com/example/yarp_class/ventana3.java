@@ -11,19 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ventana3 extends AppCompatActivity implements View.OnClickListener {
+public class ventana3 extends AppCompatActivity{
 
-    private Button r;
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ventana3);
-        r = (Button) findViewById(R.id.button6);
-        r.setOnClickListener(this);
 
-        webView = findViewById(R.id.webView);
+        webView = (WebView) findViewById(R.id.webView);
 
         // Configuración del WebView
         WebSettings webSettings = webView.getSettings();
@@ -33,7 +30,7 @@ public class ventana3 extends AppCompatActivity implements View.OnClickListener 
         webView.setWebViewClient(new WebViewClient());
 
         // Cargar una página web
-        webView.loadUrl("https://www.google.com&quot;);
+        webView.loadUrl("https://www.google.com ");
     }
 
     // Manejo del botón "Atrás" para volver en la navegación del WebView
@@ -46,10 +43,4 @@ public class ventana3 extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(ventana3.this,MainActivity.class);
-        startActivity(intent);
-
-    }
 }
